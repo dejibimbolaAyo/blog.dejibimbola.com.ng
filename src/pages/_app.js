@@ -22,6 +22,11 @@ export default function App({ Component, pageProps }) {
       <SectionContainer>
         <main>
           <Component {...pageProps} />
+					<div>
+						<p className="text-center">
+							<h1 className="h-4 p-6 m-3 text-gray-700">Special thanks to the folks at <a href="https://blog.tailwind.com" className="text-yellow-400 hover:text-yellow-500">TailwindCSS</a> for the inspiration 🥂</h1>
+						</p>
+					</div>
         </main>
       </SectionContainer>
     </div>
