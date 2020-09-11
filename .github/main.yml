@@ -1,4 +1,4 @@
-name: Dejibimbola Clog Continuous Integration 
+name: Dejibimbola Blog Continuous Integration 
 
 on:
   pull_request:
