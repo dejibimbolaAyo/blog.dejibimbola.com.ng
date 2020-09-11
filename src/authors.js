@@ -1,7 +1,14 @@
 import adamwathanAvatar from './img/adamwathan.jpg'
+import dejibimbolaAvatar from './img/dejibimbola.jpg'
 import bradlcAvatar from './img/bradlc.jpg'
 import steveschogerAvatar from './img/steveschoger.jpg'
 import robinmalfaitAvatar from './img/robinmalfait.jpg'
+
+export const dejibimbola = {
+  name: 'Abimbola Ayodeji',
+  twitter: '@dejibimbola',
+  avatar: dejibimbolaAvatar,
+}
 
 export const adamwathan = {
   name: 'Adam Wathan',
