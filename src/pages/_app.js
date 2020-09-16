@@ -2,8 +2,12 @@ import '@/css/tailwind.css'
 import Head from 'next/head'
 import Header from '@/components/Header'
 import SectionContainer from '@/components/SectionContainer'
+import Router from 'next/router'
+
+import * as gtag from "../lib/analytics"
 
 export default function App({ Component, pageProps }) {
+	Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
   return (
     <div className="antialiased">
       <Head>
@@ -23,9 +27,9 @@ export default function App({ Component, pageProps }) {
         <main>
           <Component {...pageProps} />
 					<div>
-						<p className="text-center">
+						<div className="text-center">
 							<h1 className="h-4 p-6 m-3 text-gray-700">Special thanks to the folks at <a href="https://blog.tailwind.com" className="text-yellow-400 hover:text-yellow-500">TailwindCSS</a> for the inspiration 🥂</h1>
-						</p>
+						</div>
 					</div>
         </main>
       </SectionContainer>
