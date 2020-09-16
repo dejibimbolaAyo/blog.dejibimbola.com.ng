@@ -41,15 +41,15 @@ export default class Document extends NextDocument {
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
 				/>
-				{/* <InlineStylesHead>
-					<link
+				<InlineStylesHead>
+					{/* <link
 						rel="preload"
 						href="/fonts/Inter-roman.var-latin.woff2?3.13"
 						as="font"
 						type="font/woff2"
 						crossOrigin="true"
-					/>
-				</InlineStylesHead> */}
+					/> */}
+				</InlineStylesHead>
 				<body>
 					<Main />
 					<NextScript />
