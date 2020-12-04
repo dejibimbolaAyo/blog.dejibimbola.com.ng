@@ -27,8 +27,8 @@ export default function App({ Component, pageProps }) {
         <main>
           <Component {...pageProps} />
 					<div>
-						<div className="text-center">
-							<h1 className="h-4 p-6 m-3 text-gray-700">Special thanks to the folks at <a href="https://blog.tailwind.com" className="text-yellow-400 hover:text-yellow-500">TailwindCSS</a> for the inspiration 🥂</h1>
+						<div className="p-5 text-center">
+							<h1 className="h-4 p-6 m-3 text-gray-700">Special thanks to the folks at <a href="https://tailwindcss.com" className="text-yellow-400 hover:text-yellow-500">TailwindCSS</a> for the inspiration 🥂</h1>
 						</div>
 					</div>
         </main>

@@ -27,16 +27,16 @@ export default function Post({ meta, children, posts }) {
       <Head>
         <title>{meta.title} – Tailwind CSS</title>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@tailwindcss" />
-        <meta name="twitter:creator" content="@tailwindcss" />
-        <meta name="twitter:title" content={`${meta.title} – Tailwind CSS`} />
+        <meta name="twitter:site" content="@dejibimbola" />
+        <meta name="twitter:creator" content="@dejibimbola" />
+        <meta name="twitter:title" content={`${meta.title} – Dejibimbola's Blog`} />
         <meta name="twitter:description" content={meta.description} />
-        <meta name="twitter:image" content={`https://blog.tailwindcss.com${meta.image}`} />
-        <meta property="og:url" content={`https://blog.tailwindcss.com${router.pathname}`} />
+        <meta name="twitter:image" content={`https://blog.dejibimbola.com.ng${meta.image}`} />
+        <meta property="og:url" content={`https://blog.dejibimbola.com.ng${router.pathname}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${meta.title} – Tailwind CSS`} />
+        <meta property="og:title" content={`${meta.title} – Dejibimbola's Blog`} />
         <meta property="og:description" content={meta.description} />
-        <meta property="og:image" content={`https://blog.tailwindcss.com${meta.image}`} />
+        <meta property="og:image" content={`https://blog.dejibimbola.com.ng${meta.image}`} />
         <meta name="description" content={meta.description}></meta>
       </Head>
       <header className="pt-6 xl:pb-10">
