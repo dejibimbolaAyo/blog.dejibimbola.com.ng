@@ -2,11 +2,17 @@ import { dejibimbola } from '@/authors'
 import buildOutput from './build_output.png'
 import cardImg from './card.png'
 import folderStructure from './folder_structure.png'
+import netlifyDashboard from './netlify_dashboard.png'
+import updatedBuildFolder from './updated_build_folder.png'
+import uploadSite from './upload_your_site.png'
+import comingSoon from './coming_soon.png'
 
 export const meta = {
   title: 'Creating your own blog',
-  description: `I love trying out new things, and I have tons of things I still want to try out as a Software engineer; cool projects and cools ideas to learn with and solidify my knowledge.
-  Also, I want a repertoire of things I have done in the past, quick access to my repository of cool stuff, to whip out when I need them.`,
+  description: `If you read my <a href="https://blog.dejibimbola.com.ng/starting-a-blog">previous blog post (my first blog post actually 😊)</a> you would see in more detail why I approach blogging the way I am approaching it.
+I did not build this from scratch, but I have leveraged the work folks from Tailwincss already did.
+Most of my creative work is done from an IDE (VS code), and my workflow is; IDE to Git, then do some CI (continuous integration), build, and deploy (continuous delivery). And I have paid attention to what feels like home to me and what is natural to my creative process.
+Well, you get the idea, I'm a software engineer 😊.`,
   date: '2020-12-03T15:05:31Z',
   authors: [dejibimbola],
   image: cardImg,
@@ -18,6 +24,14 @@ Most of my creative work is done from an IDE (VS code), and my workflow is; IDE 
 Well, you get the idea, I'm a software engineer 😊.
 
 <!--more-->
+
+<img
+  width="1524"
+  height="857"
+  alt="Building your blog"
+  src={cardImg}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
 
 ## Setting up a blog
 
@@ -56,40 +70,56 @@ In this part, I will be covering the following:
 - Securing your site with Let's encrypt
 
 ## Cloning the repository
+
 I would recommend you clone directly from my repository, as I can only then guarantee that these steps would keep working for as long as possible, and if there will be changes to the repository in the future, you would be notified of such changes in the steps to follow.
 
 ### Terminal environment
+
 For Mac users, open Spotlight and type "Terminal".
 For Windows users, open the Start menu and type "Terminal" 😊
 From terminal, you would be able to clone the repository by running the following command, and this is with an assumption that you already have Git installed on your local system and also have a GitHub account set up.
 
-``` git clone https://github.com/dejibimbolaAyo/blog.git my-blog```
+```bash
+git clone https://github.com/dejibimbolaAyo/blog.git my-blog
+```
 
 The above command, if successfully run, would create a new folder with the name `my-blog` in the directory from where you ran the above command for cloning.
 
 Tip: To check the path to the directory where you have your newly cloned blog, run this command:
 On Mac or Linux (or if you are using bash on Windows)
 
-``` pwd```
+```bash
+pwd
+```
 
 On Windows, using the command line
 
-```chdir```
+```bash
+chdir
+```
 
 To continue with the rest of the setup, you would need to change the directory to `my-blog` which has the source code you just cloned from GitHub. Run the following command to change the directory to `my-blog`
 
-``` cd my-blog ```
+```bash
+cd my-blog
+```
 
 ### Installing dependencies
 
 At this point, you may want to open the project in your favorite IDE. You can do this from within the terminal by running this command:
 
-``` code . ```
+```bash
+code .
+```
 
 This will open the project in Visual Studio Code IDE.
 The above is with the assumption that you have VS Code installed on your computer.
 Run the following command to install dependencies via NPM:
-``` npm install ```
+
+```bash
+npm install
+```
+
 Wait for all the dependencies to be installed.
 For you to complete the dependency installation, you would need to have NodeJs and NPM installed.
 Alternatively, you can use yarn to install the dependencies
@@ -102,11 +132,21 @@ There are a few folders you may want to consider in the project:
 - `src` folder
 - `unpublished` folder
 
+<img
+  width="1524"
+  height="857"
+  alt="Folder structure"
+  src={folderStructure}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
+
 ## Testing locally
 
 Once you have all dependencies installed, you can run your blog locally by running the command:
 
-```npm run dev```
+```bash
+npm run dev
+```
 
 ## Customizing your blog
 
@@ -127,27 +167,48 @@ The magic, (let's call it magic for now), of building, is handled by the NextJs 
 The build process creates a new folder `out` which contains your site assets and files, all prepared to be deployed on a static website host.
 To initiate the build process, run this command:
 
-```npm run build`` `
+```bash
+npm run build
+```
 
 Once this process is done, you will have a `out` folder with the build output.
-[insert the build process from terminal image]
+<img
+  width="1524"
+  height="857"
+  alt="Build output"
+  src={buildOutput}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
 
 After this is done, you would see the outputted files in the out folder
-[insert the image for the updated folder structure here]
+<img
+  width="1524"
+  height="857"
+  alt="Updated build folder"
+  src={updatedBuildFolder}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
 
 The `out` folder will later be deployed.
 
 ## Setting up a Netlify account
 
 Head over to the Netlify website and create an account.
-Visit `https://app.netlify.com`, or search for Netlify with your search engine of choice.
+Visit <a href="https://app.netlify.com">Netlify</a>, or search for Netlify with your search engine of choice.
 Create an account through the available sign-up option.
 Upon account creation, you are ready to upload your first website.
 
 ## Uploading your site
+
 Once done with account creation, you are ready to upload your first site. This is straightforward for fresh accounts, while existing an account with existing sites may need some extra steps to take to upload a new website.
 Follow the prompt to drag and drop your website.
-[insert the site upload image]
+<img
+  width="1524"
+  height="857"
+  alt="Netlify upload site"
+  src={uploadSite}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
 
 You would be provided with a link to your new website, and you are good to go.
 
@@ -162,3 +223,11 @@ Yes, this is not the end, as this is not all there is to the setup. This does no
 - Automating your deployment with Netlify CICD pipeline
 - Registering and connecting a domain name to your Netlify site
 - Securing your site with Let's encrypt
+
+<img
+  width="1524"
+  height="857"
+  alt="How I built this: Part tow"
+  src={comingSoon}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
