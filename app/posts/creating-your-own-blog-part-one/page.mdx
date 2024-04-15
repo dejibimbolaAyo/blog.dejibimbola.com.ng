@@ -1,4 +1,4 @@
-import { dejibimbola } from '@/authors'
+import { dejibimbola } from '@/app/data/authors'
 import buildOutput from './build_output.png'
 import cardImg from './card.png'
 import folderStructure from './folder_structure.png'
@@ -6,6 +6,7 @@ import netlifyDashboard from './netlify_dashboard.png'
 import updatedBuildFolder from './updated_build_folder.png'
 import uploadSite from './upload_your_site.png'
 import comingSoon from './coming_soon.png'
+import PageTitle from '@/app/components/PageTitle'
 
 export const meta = {
   title: 'Creating your own blog - Part One',
@@ -18,12 +19,14 @@ Well, you get the idea, I'm a software engineer 😊.`,
   image: cardImg,
 }
 
+{/* excerpt */}
+
 If you read my last blog post (my first blog post actually 😊) you would see in more detail why I approach blogging the way I am approaching it.
 I did not build this from scratch, but I have leveraged the work folks from Tailwindcss already did.
 Most of my creative work is done from an IDE (VS code), and my workflow is; IDE to Git, then do some CI (continuous integration), build, and deploy (continuous delivery). And I have paid attention to what feels like home to me and what is natural to my creative process.
 Well, you get the idea, I'm a software engineer 😊.
 
-<!--more-->
+{/* /excerpt */}
 
 <img
   width="1524"
@@ -32,6 +35,8 @@ Well, you get the idea, I'm a software engineer 😊.
   src={cardImg}
   sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
 />
+
+## Table of contents
 
 ## Setting up a blog
 
@@ -172,6 +177,7 @@ npm run build
 ```
 
 Once this process is done, you will have a `out` folder with the build output.
+
 <img
   width="1524"
   height="857"
@@ -181,6 +187,7 @@ Once this process is done, you will have a `out` folder with the build output.
 />
 
 After this is done, you would see the outputted files in the out folder
+
 <img
   width="1524"
   height="857"
@@ -202,6 +209,7 @@ Upon account creation, you are ready to upload your first website.
 
 Once done with account creation, you are ready to upload your first site. This is straightforward for fresh accounts, while existing an account with existing sites may need some extra steps to take to upload a new website.
 Follow the prompt to drag and drop your website.
+
 <img
   width="1524"
   height="857"

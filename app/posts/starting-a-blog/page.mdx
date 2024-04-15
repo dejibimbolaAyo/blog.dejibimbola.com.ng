@@ -1,4 +1,4 @@
-import { dejibimbola } from '@/authors'
+import { dejibimbola } from '@/app/data/authors'
 import cardImg from './card.png'
 import blogImg from './blog.png'
 import nextBlogImg from './next-blog-post.png'
@@ -12,13 +12,15 @@ export const meta = {
   image: cardImg,
 }
 
+{/* excerpt */}
+
 I love trying out new things, and I have tons of things I still want to try out as a Software engineer; cool projects and cools ideas to learn with and solidify my knowledge.
 Also, I want a repertoire of things I have done in the past, quick access to my repository of cool stuff, to whip out when I need them.
 
 “I learned very early the difference between knowing the name of something and knowing something.”
 ― Richard P. Feynman
 
-<!--more-->
+{/* /excerpt */}
 
 <img
   width="1524"
@@ -27,6 +29,8 @@ Also, I want a repertoire of things I have done in the past, quick access to my 
   src={blogImg}
   sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
 />
+
+## Table of content
 
 ## Why?
 
@@ -51,41 +55,37 @@ const onlyUnique = (value, index, self) => {
 }
 
 const reconstructAlphabet = (words) => {
-  let alphabets = [];
-  words.forEach((word) => alphabets.push(...word.split('')));
-  const distinctLetters = alphabets.filter((letter, index) => onlyUnique(letter, index, alphabets));
-  
-  return distinctLetters;
+  let alphabets = []
+  words.forEach((word) => alphabets.push(...word.split('')))
+  const distinctLetters = alphabets.filter((letter, index) => onlyUnique(letter, index, alphabets))
+
+  return distinctLetters
 }
-const words = [
-  "baker",
-  "dark",
-  "ark"
-]
+const words = ['baker', 'dark', 'ark']
 
 reconstructAlphabet(words) // [ 'b', 'a', 'k', 'e', 'r', 'd' ]
-
 ```
 
 I wanted writing a blog post to be as simple as typing from my IDE of choice (VS Code) and creating a PR that would trigger a “publish”.
 
 I was able to get all of these using Tailwindcss blog forked from their repository (unashamedly).
 
-For the ease of publishing, Netlify plays a great role in automatically deploying (or publishing) my post once I merge a pull request into the master branch of the Github repository of my blog. Cool stuff !!! 😎 🔥 🔥 🔥 
+For the ease of publishing, Netlify plays a great role in automatically deploying (or publishing) my post once I merge a pull request into the master branch of the Github repository of my blog. Cool stuff !!! 😎 🔥 🔥 🔥
 
 If you would like to build this blog, refer to the original post made on <a href="https://blog.tailwindcss.com/building-the-tailwind-blog/" target="_blank">TailwindCSS Blog.</a>
 
 ## Customization and Challenges
 
 Expect <a href="https://blog.dejibimbola.com.ng/creating-your-own-blog-part-one">a blog post</a> detailing how I cloned, customized, got a domain name, and deployed the blog soon.
+
 <a href="https://blog.dejibimbola.com.ng/creating-your-own-blog-part-one">
-<img
-  width="1524"
-  height="857"
-  alt="Coming soon to dejibimbola blog"
-  src={nextBlogImg}
-  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
-/>
+  <img
+    width="1524"
+    height="857"
+    alt="Coming soon to dejibimbola blog"
+    src={nextBlogImg}
+    sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+  />
 </a>
 
 ## How frequently would I post?
