@@ -22,6 +22,7 @@
     "remark-smartypants": "^2.1.0",
     "remark-toc": "^9.0.0",
     "simple-functional-loader": "^1.2.1",
+    "@netlify/plugin-nextjs": "^5.1.0",
     "tinytime": "^0.2.6"
   },
   "devDependencies": {
