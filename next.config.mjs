@@ -35,7 +35,7 @@ const withMDX = createMDX({
 })
 
 const nextConfig = {
-  output: options.isServer ? 'export' : 'standalone',
+  output: 'standalone',
   experimental: {
     mdxRs: false,
   },
