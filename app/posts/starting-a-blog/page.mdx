@@ -1,0 +1,93 @@
+import { dejibimbola } from '@/app/data/authors'
+import cardImg from './card.png'
+import blogImg from './blog.png'
+import nextBlogImg from './next-blog-post.png'
+
+export const meta = {
+  title: 'Starting a Blog',
+  description: `I love trying out new things, and I have tons of things I still want to try out as a Software engineer; cool projects and cools ideas to learn with and solidify my knowledge.
+  Also, I want a repertoire of things I have done in the past, quick access to my repository of cool stuff, to whip out when I need them.`,
+  date: '2020-09-16T15:05:31Z',
+  authors: [dejibimbola],
+  image: cardImg,
+}
+
+{/* excerpt */}
+
+I love trying out new things, and I have tons of things I still want to try out as a Software engineer; cool projects and cools ideas to learn with and solidify my knowledge.
+Also, I want a repertoire of things I have done in the past, quick access to my repository of cool stuff, to whip out when I need them.
+
+“I learned very early the difference between knowing the name of something and knowing something.”
+― Richard P. Feynman
+
+{/* /excerpt */}
+
+<img
+  width="1524"
+  height="857"
+  alt="Coming soon to dejibimbola blog"
+  src={blogImg}
+  sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+/>
+
+## Table of content
+
+## Why?
+
+There are so many things to learn as a software engineer - technology stack, the new shiny framework, methodologies to familiarise oneself with - that it feels there is little time to learn as much as possible to stay ahead (and of course there is little time). But writing about what one has learned serves a good purpose of deepening the knowledge one has gained. Blogging about what I am learning or what I have built may also serve as a guide to others who want to learn or build fun projects.
+
+## Inspiration
+
+I have had the idea in my head to maintain a blog, but I just did not come around to building one for a reason; I could not settle with what technology to use for my blog. I could have gone the route of using a CMS (Content Management System) like WordPress, but I consider it overkill for a little blog. This need to decide on what technology to use made me think less and less about the idea of maintaining a blog, till the idea was just an idea sitting at the back of my mind.
+
+But I was inspired to own a blog when I saw <a href="https://blog.tailwindcss.com/" target="_blank">Tailwindcss’ blog page</a>, and the blog post on how they built the blog page.
+
+Their choice of technology aligned a great deal with what I wanted.
+
+## Choice of Technology
+
+Tailwind’s blog page (as of the time of writing) was built using NextJs, a static site generator for ReactJs. Their setup uses markdown and this was the main attraction for me.
+Why markdown, you may want to ask. Markdown allows code block out of the box with little customization for code highlighting etc.
+
+```js
+const onlyUnique = (value, index, self) => {
+  return self.indexOf(value) === index
+}
+
+const reconstructAlphabet = (words) => {
+  let alphabets = []
+  words.forEach((word) => alphabets.push(...word.split('')))
+  const distinctLetters = alphabets.filter((letter, index) => onlyUnique(letter, index, alphabets))
+
+  return distinctLetters
+}
+const words = ['baker', 'dark', 'ark']
+
+reconstructAlphabet(words) // [ 'b', 'a', 'k', 'e', 'r', 'd' ]
+```
+
+I wanted writing a blog post to be as simple as typing from my IDE of choice (VS Code) and creating a PR that would trigger a “publish”.
+
+I was able to get all of these using Tailwindcss blog forked from their repository (unashamedly).
+
+For the ease of publishing, Netlify plays a great role in automatically deploying (or publishing) my post once I merge a pull request into the master branch of the Github repository of my blog. Cool stuff !!! 😎 🔥 🔥 🔥
+
+If you would like to build this blog, refer to the original post made on <a href="https://blog.tailwindcss.com/building-the-tailwind-blog/" target="_blank">TailwindCSS Blog.</a>
+
+## Customization and Challenges
+
+Expect <a href="https://blog.dejibimbola.com.ng/creating-your-own-blog-part-one">a blog post</a> detailing how I cloned, customized, got a domain name, and deployed the blog soon.
+
+<a href="https://blog.dejibimbola.com.ng/creating-your-own-blog-part-one">
+  <img
+    width="1524"
+    height="857"
+    alt="Coming soon to dejibimbola blog"
+    src={nextBlogImg}
+    sizes="(min-width: 1280px) 51rem, (min-width: 768px) 45rem, (min-width: 640px) calc(100vw - 3rem), calc(100vw - 2rem)"
+  />
+</a>
+
+## How frequently would I post?
+
+I will for now make it twice a month, and become more frequent as time goes on.
