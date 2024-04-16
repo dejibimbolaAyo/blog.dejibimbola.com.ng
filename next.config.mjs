@@ -35,6 +35,7 @@ const withMDX = createMDX({
 })
 
 const nextConfig = {
+  output: options.isServer ? 'export' : 'standalone',
   experimental: {
     mdxRs: false,
   },
@@ -68,18 +69,11 @@ const nextConfig = {
         return source + `\n\nexport const slug = '${slug}'`
       }),
 
-      // Add a content preview to the exported module
       createLoader(function (src) {
         const [preview] = src.split('{/* /excerpt */}')
         return preview.replace('{/* excerpt */}', '')
       }),
     ]
-
-    config.module.rules.push({
-      test: /\.mdx$/,
-      resourceQuery: /rss/,
-      use: [options.defaultLoaders.babel, ...mdx()],
-    })
 
     config.module.rules.push({
       test: /\.mdx$/,
@@ -101,16 +95,6 @@ const nextConfig = {
         ]),
       ],
     })
-
-    if (!options.dev && options.isServer) {
-      const originalEntry = config.entry
-
-      config.entry = async () => {
-        const entries = { ...(await originalEntry()) }
-        entries['./scripts/build-rss.js'] = './scripts/build-rss.js'
-        return entries
-      }
-    }
 
     return config
   },

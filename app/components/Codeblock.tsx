@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import cx from 'classnames'
-import copyToClipboard from '@/utils/copyToClipboard'
+import copyToClipboard from '@/app/lib/copyToClipboard'
 
 interface CodeblockProps {
   children: ReactNode

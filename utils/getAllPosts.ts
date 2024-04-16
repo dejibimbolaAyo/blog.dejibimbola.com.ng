@@ -26,14 +26,10 @@ export async function getAllPostPreviews(): Promise<PostFromFile[]> {
   return importAll(require.context('@/app/posts/?preview', true, /\.mdx$/))
 }
 
-export function getAllPosts(): Promise<PostFromFile[]> {
-  return importAll(require.context('@/app/posts/?rss', false, /\.mdx$/))
-}
-
 export async function getPostMetadata(pathname: string): Promise<PostMetadata> {
   const posts = await getAllPostPreviews();
   const post = posts.find(({ slug }) => pathname === slug);
-  const postIndex = posts.findIndex(({slug}) => slug === pathname)
+  const postIndex = posts.findIndex(({ slug }) => slug === pathname)
   const previous = posts[postIndex + 1]
   const next = posts[postIndex - 1]
 

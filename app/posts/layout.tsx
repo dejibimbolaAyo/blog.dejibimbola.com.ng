@@ -6,7 +6,6 @@ import { getPostMetadata } from '@/utils/getAllPosts'
 import { PostMetadata } from '@/app/models/Post'
 import PageTitle from '@/app/components/PageTitle'
 import PostDate from '@/app/components/PostDate'
-import Link from 'next/link'
 import ArticleNavigation from '../components/ArticleNavigation'
 import AuthorDetails from '../components/AuthorDetails'
 

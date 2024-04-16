@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && npm run build:rss",
-    "start": "next start",
-    "build:rss": "node ./.next/server/scripts/build-rss.js"
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "@next/mdx": "^14.1.4",
@@ -30,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/rss": "^0.0.32",
     "@types/webpack-env": "^1.18.4",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
