@@ -19,6 +19,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "tailwindcss": "^1.6.0",
+    "@netlify/plugin-nextjs": "^5.1.0",
     "tinytime": "^0.2.6"
   },
   "devDependencies": {
