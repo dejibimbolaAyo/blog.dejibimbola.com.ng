@@ -18,7 +18,7 @@ const Home = async () => {
   const posts = await getPosts()
 
   return (
-    <div className="container mx-auto px-16 py-12">
+    <div className="container mx-auto px-4 py-8 lg:px-16 lg:py-12">
       <div className="divide-y divide-gray-200">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
