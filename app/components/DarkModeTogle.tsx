@@ -12,7 +12,9 @@ const DarkModeToggle: React.FC = () => {
 
   if (!mounted) {
     return (
-      <div className="skeleton w-6 h-6 rounded-full shrink-0 bg-gray-400 dark:bg-neutral-700"></div>
+      <div>
+        <div className="skeleton w-6 h-6 rounded-full shrink-0 bg-gray-400 dark:bg-neutral-700"></div>
+      </div>
     )
   }
 

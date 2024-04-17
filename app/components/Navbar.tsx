@@ -19,14 +19,14 @@ const Navbar: React.FC = () => {
             <a href="/">
               <Image
                 src="/images/dejibimbola_lg_black.png"
-                height={20}
+                height={32}
                 width={150}
                 alt="Logo"
                 className="dark:hidden"
               />
               <Image
                 src="/images/dejibimbola_lg_white.png"
-                height={20}
+                height={32}
                 width={150}
                 alt="Logo"
                 className="hidden dark:block"
