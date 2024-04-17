@@ -19,16 +19,16 @@ const Home = async () => {
 
   return (
     <div className="container mx-auto px-4 py-8 lg:px-16 lg:py-12">
-      <div className="divide-y divide-gray-200">
+      <div className="divide-y divide-gray-200 dark:divide-gray-800">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Journey
           </h1>
-          <p className="text-lg leading-7 text-gray-500">
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             My journey as a developer, chronicled in a blog.
           </p>
         </div>
-        <ul className="divide-y divide-gray-200">
+        <ul className="divide-y divide-gray-200 dark:divide-gray-800">
           {posts.map(({ slug, meta, preview }) => {
             return (
               <li key={slug} className="py-12">
@@ -44,18 +44,16 @@ const Home = async () => {
                   <div className="space-y-5 xl:col-span-3">
                     <div className="space-y-6">
                       <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={slug} className="text-gray-900">
-                          {meta.title}
-                        </Link>
+                        <Link href={slug}>{meta.title}</Link>
                       </h2>
-                      <div className="prose text-gray-500 max-w-none">
+                      <div className="max-w-none">
                         <div dangerouslySetInnerHTML={{ __html: preview }} />
                       </div>
                     </div>
                     <div className="text-base font-medium leading-6">
                       <Link
                         href={slug}
-                        className="text-yellow-400 hover:text-yellow-500"
+                        className="text-yellow-400 hover:text-yellow-500 dark:text-yellow-600 dark:hover:text-yellow-500 transition-colors"
                         aria-label={`Read "${meta.title}"`}
                       >
                         Read more &rarr;
