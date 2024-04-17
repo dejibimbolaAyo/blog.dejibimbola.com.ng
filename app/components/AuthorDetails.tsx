@@ -23,7 +23,7 @@ const AuthorDetails: React.FC<AuthorDetailsProps> = ({ authors }) => {
         <ul className="flex space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
           {authors.map((author) => (
             <li key={author.twitter} className="flex items-center space-x-2">
-              <img src={author.avatar} alt="" className="w-10 h-10 rounded-full" />
+              <img src={author.avatar} alt={author.name} className="w-10 h-10 rounded-full" />
               <dl className="text-sm font-medium leading-5 whitespace-no-wrap">
                 <dt className="sr-only">Name</dt>
                 <dd className="text-gray-900 dark:text-gray-300">{author.name}</dd>
