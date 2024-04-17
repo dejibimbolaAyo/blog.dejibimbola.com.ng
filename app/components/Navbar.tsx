@@ -2,10 +2,16 @@
 
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { MenuItems } from '../models/MenuItem'
+import HamburgerMenu from './HamburgerMenu'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleIsOpen = () => setIsOpen(!isOpen)
+  const menuItems: MenuItems = [
+    { name: 'Home', link: '/' },
+    { name: 'Portfolio', link: 'https://dejibimbola.com', external: true, icon: '→' },
+  ]
 
   const menu = (
     <li>
@@ -33,32 +39,19 @@ const Navbar: React.FC = () => {
             </a>
           </div>
           <div className="hidden md:flex">
-            <a href="/" className="text-gray-700 hover:text-gray-900 px-4">
-              Home
-            </a>
-            <a href="https://dejibimbola.com" className="text-gray-700 hover:text-gray-900 px-4">
-              Portfolio &#8594;
-            </a>
-          </div>
-          <div className="md:hidden">
-            <button onClick={toggleIsOpen}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-700"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+            {menuItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                target={item.external ? '_blank' : '_self'}
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-gray-900 px-4 transition-colors"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
-            {isOpen && <ul>{menu}</ul>}
+                {item.name} {item.icon}
+              </a>
+            ))}
           </div>
+          <HamburgerMenu menuItems={menuItems} />
         </div>
       </div>
     </nav>

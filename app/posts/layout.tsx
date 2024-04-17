@@ -31,7 +31,7 @@ const PostLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
     fetchData()
   }, [pathname])
   return (
-    <div className="container bg-white m-16 p-16 mx-auto">
+    <div className="container bg-white my-4 p-4 lg:my-16 lg:p-16 mx-auto">
       <div className="space-y-1 text-center">
         <dl className="space-y-10">
           <PostDate date={postMetadata.date} />
