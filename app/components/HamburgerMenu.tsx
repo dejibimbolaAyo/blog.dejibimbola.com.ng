@@ -32,7 +32,7 @@ const HamburgerMenu: React.FC<NavbarMenuProps> = ({ menuItems }) => {
               href={item.link}
               target={item.external ? '_blank' : '_self'}
               rel="noopener noreferrer"
-              className="menu-title text-gray-700 hover:bg-yellow-50 transition-colors"
+              className="menu-title text-gray-700 hover:bg-neutral-200 transition-colors"
             >
               {item.name}
             </a>

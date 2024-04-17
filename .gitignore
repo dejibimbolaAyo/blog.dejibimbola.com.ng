@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 
+# Postcss
+/app/css/globals.css
+
+/out
+
 # testing
 /coverage
 
