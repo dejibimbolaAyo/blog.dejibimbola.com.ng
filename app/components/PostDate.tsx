@@ -8,7 +8,7 @@ interface PostDateProps {
 
 const PostDate: React.FC<PostDateProps> = ({ date }) => {
   if (!date) {
-    return <div className="skeleton w-full h-8 mb-4 bg-gray-200 rounded-md" />
+    return <div className="skeleton w-full h-8 mb-4 bg-gray-200 dark:bg-neutral-700 rounded-md" />
   }
 
   return (

@@ -7,7 +7,7 @@ interface PageTitleProps {
 
 const PageTitle: React.FC<PageTitleProps> = ({ children }) => {
   if (!children) {
-    return <div className="skeleton w-full h-14 mb-4 bg-gray-200 rounded-md" />
+    return <div className="skeleton w-full h-14 mb-4 bg-gray-200 dark:bg-neutral-700 rounded-md" />
   }
 
   return (
