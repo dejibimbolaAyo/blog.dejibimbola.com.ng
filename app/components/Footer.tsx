@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
+import BackgroundBeams from './BackgrroundBeams'
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer footer-center p-10 bg-yellow-600 text-primary-content">
+    <footer className="footer footer-center p-10 bg-neutral-950 text-yellow-600 h-[20rem] w-full relative flex flex-col items-center justify-center antialiased">
       <aside>
         <Image
           src="/images/dejibimbola_lg.png"
@@ -55,6 +56,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
       </nav>
+      <BackgroundBeams />
     </footer>
   )
 }
