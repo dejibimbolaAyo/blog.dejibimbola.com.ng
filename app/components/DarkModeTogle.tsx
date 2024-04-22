@@ -4,11 +4,11 @@ import cx from 'classnames'
 
 const DarkModeToggle: React.FC = () => {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
-  }, [theme])
+  })
 
   if (!mounted) {
     return (
@@ -23,13 +23,12 @@ const DarkModeToggle: React.FC = () => {
       {/* this hidden checkbox controls the state */}
       <input
         type="checkbox"
-        onChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        defaultChecked={theme === 'light'}
+        onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
       />
 
       {/* sun icon */}
       <svg
-        className={cx({ 'swap-on': [theme === 'light'] }, 'w-6 h-6')}
+        className={cx({ 'swap-on': [resolvedTheme === 'light'] }, 'w-6 h-6')}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="gray-800"
@@ -39,7 +38,7 @@ const DarkModeToggle: React.FC = () => {
 
       {/* moon icon */}
       <svg
-        className={cx({ 'swap-off': [theme === 'dark'] }, 'fill-current w-6 h-6')}
+        className={cx({ 'swap-off': [resolvedTheme === 'dark'] }, 'fill-current w-6 h-6')}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
