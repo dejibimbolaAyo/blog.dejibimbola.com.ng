@@ -6,6 +6,10 @@ const DarkModeToggle: React.FC = () => {
   const [mounted, setMounted] = useState(false)
   const { setTheme, resolvedTheme } = useTheme()
 
+  const toggleMode = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }
+
   useEffect(() => {
     setMounted(true)
   })
@@ -21,14 +25,11 @@ const DarkModeToggle: React.FC = () => {
   return (
     <label className="swap swap-rotate">
       {/* this hidden checkbox controls the state */}
-      <input
-        type="checkbox"
-        onChange={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      />
+      <input type="checkbox" onChange={toggleMode} defaultChecked={resolvedTheme === 'light'} />
 
       {/* sun icon */}
       <svg
-        className={cx({ 'swap-on': [resolvedTheme === 'light'] }, 'w-6 h-6')}
+        className={'swap-on w-6 h-6'}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="gray-800"
@@ -38,7 +39,7 @@ const DarkModeToggle: React.FC = () => {
 
       {/* moon icon */}
       <svg
-        className={cx({ 'swap-off': [resolvedTheme === 'dark'] }, 'fill-current w-6 h-6')}
+        className={'swap-off fill-current  w-6 h-6'}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
